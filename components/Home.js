@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 
 import { useSelector } from "react-redux";
 
@@ -6,7 +6,6 @@ import RoomItem from "./room/RoomItem";
 
 const HomeComponent = () => {
   const { rooms } = useSelector((state) => state.allRooms);
-  console.log(rooms);
 
   return (
     <section id="rooms" className="container mt-5">

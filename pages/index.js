@@ -19,7 +19,3 @@ export const getServerSideProps = wrapper.getServerSideProps(
       await store.dispatch(getRooms(req));
     }
 );
-
-// export const getServerSideProps = wrapper.getServerSideProps(async ({req,store}) =>{
-//   await store.dispatch()
-// })
