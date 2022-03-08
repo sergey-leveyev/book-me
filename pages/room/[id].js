@@ -9,7 +9,7 @@ import { wrapper } from "../../redux/store";
 export default function RoomDetailsPage() {
   return (
     <Layout>
-      <RoomDetails />
+      <RoomDetails title="Room Details" />
     </Layout>
   );
 }
