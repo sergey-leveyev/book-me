@@ -29,12 +29,16 @@ class APIFeatures {
     return this;
   }
 
-  pagination(resPerPage) {
-    const currentPage = Number(this.queryStr.page) || 1;
-    const skip = resPerPage * (currentPage - 1);
-
-    this.query = this.query.limit(resPerPage).skip(skip);
-    return this;
+  pagination(rooms) {
+    // const currentPage = Number(this.queryStr.page) || 1;
+    // const skip = resPerPage * (currentPage - 1);
+    // this.query = this.query.limit(resPerPage).skip(skip);
+    // return rooms;
+    // const limit = 2;
+    // const startIndex = (currentPage - 1) * limit;
+    // const endIndex = currentPage * limit;
+    // const resultUsers = rooms.slice(startIndex, endIndex);
+    // return resultUsers;
   }
 }
 

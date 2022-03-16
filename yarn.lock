@@ -162,6 +162,13 @@
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.4.tgz"
   "version" "15.7.4"
 
+"@types/react-js-pagination@^3.0.4":
+  "integrity" "sha512-yka+27eZ6Mg9cmwT2sADgLn3ij9hVfpPu5dk+Y/0k1xS52WZOz0LJnn4y4VKGmR4mf/tG5Ga7Dody/xmfiB0Fg=="
+  "resolved" "https://registry.npmjs.org/@types/react-js-pagination/-/react-js-pagination-3.0.4.tgz"
+  "version" "3.0.4"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-redux@^7.1.20":
   "integrity" "sha512-GxIA1kM7ClU73I6wg9IRTVwSO9GS+SAKZKe0Enj+82HMU6aoESFU2HNAdNi3+J53IaOHPiUfT3kSG4L828joDQ=="
   "resolved" "https://registry.npmjs.org/@types/react-redux/-/react-redux-7.1.22.tgz"
@@ -366,6 +373,13 @@
   "resolved" "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   "version" "1.5.1"
 
+"block-stream@*":
+  "integrity" "sha1-E+v+d4oDIFz+A3UUgeu0szAMEmo="
+  "resolved" "https://registry.npmjs.org/block-stream/-/block-stream-0.0.9.tgz"
+  "version" "0.0.9"
+  dependencies:
+    "inherits" "~2.0.0"
+
 "brace-expansion@^1.1.7":
   "integrity" "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="
   "resolved" "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz"
@@ -422,7 +436,7 @@
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
-"classnames@^2.3.1":
+"classnames@^2.2.5", "classnames@^2.3.1":
   "integrity" "sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA=="
   "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
   "version" "2.3.1"
@@ -870,6 +884,16 @@
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
 
+"fstream@^1.0.12", "fstream@1.0.12":
+  "integrity" "sha512-WvJ193OHa0GHPEL+AycEJgxvBEwyfRkN1vhjca23OaPVMCaLCXTd5qAu82AjTcgP1UJmytkOKb63Ypde7raDIg=="
+  "resolved" "https://registry.npmjs.org/fstream/-/fstream-1.0.12.tgz"
+  "version" "1.0.12"
+  dependencies:
+    "graceful-fs" "^4.1.2"
+    "inherits" "~2.0.0"
+    "mkdirp" ">=0.5 0"
+    "rimraf" "2"
+
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
   "resolved" "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -954,6 +978,11 @@
     "merge2" "^1.4.1"
     "slash" "^3.0.0"
 
+"graceful-fs@^4.1.2":
+  "integrity" "sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ=="
+  "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz"
+  "version" "4.2.9"
+
 "has-bigints@^1.0.1":
   "integrity" "sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA=="
   "resolved" "https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.1.tgz"
@@ -1031,7 +1060,7 @@
     "once" "^1.3.0"
     "wrappy" "1"
 
-"inherits@2":
+"inherits@~2.0.0", "inherits@2":
   "integrity" "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="
   "resolved" "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz"
   "version" "2.0.4"
@@ -1273,10 +1302,17 @@
   dependencies:
     "brace-expansion" "^1.1.7"
 
-"minimist@^1.2.0":
+"minimist@^1.2.0", "minimist@^1.2.5":
   "integrity" "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw=="
   "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz"
   "version" "1.2.5"
+
+"mkdirp@>=0.5 0":
+  "integrity" "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ=="
+  "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz"
+  "version" "0.5.5"
+  dependencies:
+    "minimist" "^1.2.5"
 
 "mongodb-connection-string-url@^2.4.1":
   "integrity" "sha512-mZUXF6nUzRWk5J3h41MsPv13ukWlH4jOMSk6astVeoZ1EbdTJyF5I3wxKkvqBAOoVtzLgyEYUvDjrGdcPlKjAw=="
@@ -1486,6 +1522,11 @@
   "resolved" "https://registry.npmjs.org/p-try/-/p-try-1.0.0.tgz"
   "version" "1.0.0"
 
+"paginator@^1.0.0":
+  "integrity" "sha1-dWVwKvmrlhbcph/CLHDroqQ1cmU="
+  "resolved" "https://registry.npmjs.org/paginator/-/paginator-1.0.0.tgz"
+  "version" "1.0.0"
+
 "parent-module@^1.0.0":
   "integrity" "sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g=="
   "resolved" "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz"
@@ -1550,7 +1591,7 @@
     "react-is" "^16.3.2"
     "warning" "^4.0.0"
 
-"prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
+"prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1", "prop-types@15.x.x - 16.x.x":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -1610,6 +1651,18 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
+"react-js-pagination@^3.0.3":
+  "integrity" "sha512-podyA6Rd0uxc8uQakXWXxnonoOPI6NnFOROXfc6qPKNYm44s+Bgpn0JkyflcfbHf/GFKahnL8JN8rxBHZiBskg=="
+  "resolved" "https://registry.npmjs.org/react-js-pagination/-/react-js-pagination-3.0.3.tgz"
+  "version" "3.0.3"
+  dependencies:
+    "classnames" "^2.2.5"
+    "fstream" "1.0.12"
+    "paginator" "^1.0.0"
+    "prop-types" "15.x.x - 16.x.x"
+    "react" "15.x.x - 16.x.x"
+    "tar" "2.2.2"
+
 "react-lifecycles-compat@^3.0.4":
   "integrity" "sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA=="
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
@@ -1651,6 +1704,15 @@
   dependencies:
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
+
+"react@15.x.x - 16.x.x":
+  "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
+  "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
+  "version" "16.14.0"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
+    "prop-types" "^15.6.2"
 
 "redux-devtools-extension@^2.13.9":
   "integrity" "sha512-cNJ8Q/EtjhQaZ71c8I9+BPySIBVEKssbPpskBfsXqb8HJ002A3KRVHfeRzwRo6mGPqsm7XuHTqNSNeS1Khig0A=="
@@ -1728,6 +1790,13 @@
   "integrity" "sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA=="
   "resolved" "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz"
   "version" "3.0.2"
+  dependencies:
+    "glob" "^7.1.3"
+
+"rimraf@2":
+  "integrity" "sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w=="
+  "resolved" "https://registry.npmjs.org/rimraf/-/rimraf-2.7.1.tgz"
+  "version" "2.7.1"
   dependencies:
     "glob" "^7.1.3"
 
@@ -1884,6 +1953,15 @@
   "integrity" "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
+
+"tar@2.2.2":
+  "integrity" "sha512-FCEhQ/4rE1zYv9rYXJw/msRqsnmlje5jHP6huWeBZ704jUTy02c5AZyWujpMR1ax6mVw9NyJMfuK2CMDWVIfgA=="
+  "resolved" "https://registry.npmjs.org/tar/-/tar-2.2.2.tgz"
+  "version" "2.2.2"
+  dependencies:
+    "block-stream" "*"
+    "fstream" "^1.0.12"
+    "inherits" "2"
 
 "text-table@^0.2.0":
   "integrity" "sha1-f17oI66AUgfACvLfSoTsP8+lcLQ="
