@@ -11,13 +11,17 @@ import {
 
 //Get all rooms
 export const getRooms =
-  (req, currentPageNo = 1, location = "") =>
+  (req, currentPageNo = 1, location = "", guests, category) =>
   async (dispatch) => {
     try {
       const { origin } = absoluteUrl(req);
-      const { data } = await axios.get(
-        `${origin}/api/rooms?page=${currentPageNo}&location=${location}`
-      );
+
+      let link = `${origin}/api/rooms?page=${currentPageNo}&location=${location}`;
+
+      if (guests) link = link.concat(`&guestCapacity=${guests}`);
+      if (category) link = link.concat(`&category=${category}`);
+
+      const { data } = await axios.get(link);
 
       dispatch({
         type: ALL_ROOMS_SUCCESS,
