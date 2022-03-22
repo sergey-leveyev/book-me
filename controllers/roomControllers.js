@@ -14,9 +14,6 @@ const allRooms = catchAsyncErrors(async (req, res) => {
 
   let rooms = await apiFeatures.query;
 
-  // apiFeatures.pagination(resPerPage);
-  // rooms = await apiFeatures.query
-
   const page = req.query.page;
 
   const startIndex = (page - 1) * resPerPage;
