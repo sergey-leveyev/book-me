@@ -2,26 +2,32 @@ import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 
-
-import { signIn } from "next-auth/react";
-
-import { toast } from "react-toastify";
+import ButtonLoader from "../layout/ButtonLoader";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const submitHandler = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
+
     try {
-      const { data } = await axios.post("/api/auth/login", {
-        email,
-        password,
-      });
+      const { data } = await axios
+        .post("/api/auth/login", {
+          email,
+          password,
+        })
+        .then(() => {
+          window.location.href = "/";
+        });
     } catch (err) {
-      alert(err.response.data ? err.response.data.message : err.message);
+      // alert(err.response.data ? err.response.data.message : err.message);
     }
+
+    setLoading(false);
   };
 
   return (
@@ -60,13 +66,14 @@ const Login = () => {
               id="login_button"
               type="submit"
               className="btn btn-block py-3"
+              disabled={loading ? true : false}
             >
-              LOGIN
+              {loading ? <ButtonLoader /> : "LOGIN"}
             </button>
 
-            <a href="#" className="float-right mt-3">
+            <Link href="/register" className="float-right mt-3">
               New User?
-            </a>
+            </Link>
           </form>
         </div>
       </div>

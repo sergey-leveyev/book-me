@@ -1,8 +1,17 @@
-import User from "../models/user";
 import bcrypt from "bcryptjs";
+import cloudinary from "cloudinary";
+
+import User from "../models/user";
 import { signToken } from "../utils/signToken";
 
 import catchAsyncErrors from "../middlewares/catchAsyncErrors";
+
+//Setting up cloudinary config
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 //Login user => /api/auth/login
 const login = async (req, res) => {
@@ -10,6 +19,7 @@ const login = async (req, res) => {
 
   if (user && bcrypt.compareSync(req.body.password, user.password)) {
     const token = signToken(user);
+
     res.send({
       token,
       _id: user._id,
@@ -23,6 +33,12 @@ const login = async (req, res) => {
 
 // Register user => /api/auth/register
 const registerUser = catchAsyncErrors(async (req, res) => {
+  const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
+    folder: "bookme/avatars",
+    width: "150",
+    crop: "scale",
+  });
+
   const { name, email, password } = req.body;
 
   const user = await User.create({
@@ -30,8 +46,8 @@ const registerUser = catchAsyncErrors(async (req, res) => {
     email,
     password,
     avatar: {
-      public_id: "PUBLIC_ID",
-      url: "URL",
+      public_id: result.public_id,
+      url: result.secure_url,
     },
   });
 
