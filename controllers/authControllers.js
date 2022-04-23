@@ -33,12 +33,13 @@ const login = async (req, res) => {
 
 // Register user => /api/auth/register
 const registerUser = catchAsyncErrors(async (req, res) => {
+
   const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
     folder: "bookme/avatars",
     width: "150",
     crop: "scale",
   });
-
+  console.log("dssssssss");
   const { name, email, password } = req.body;
 
   const user = await User.create({

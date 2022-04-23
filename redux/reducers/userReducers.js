@@ -15,13 +15,13 @@ export const authReducer = (state = { user: null }, action) => {
 
     case REGISTER_USER_SUCCESS:
       return {
-        location: false,
+        loading: false,
         success: true,
       };
 
     case REGISTER_USER_FAIL:
       return {
-        location: false,
+        loading: false,
         error: action.payload,
       };
 

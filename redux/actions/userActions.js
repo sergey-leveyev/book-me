@@ -23,6 +23,8 @@ export const registerUser = (userData) => async (dispatch) => {
     dispatch({
       type: REGISTER_USER_SUCCESS,
     });
+
+
   } catch (error) {
     dispatch({
       type: REGISTER_USER_FAIL,
